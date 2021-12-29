@@ -90,11 +90,3 @@ nmap <silent> <Plug>SendLine :call <SID>Send('direct', getline('.'))<cr>
 nmap <silent> <Plug>Send :set opfunc=<SID>Send<cr>g@
 vmap <silent> <Plug>Send :<c-u>call <SID>Send(visualmode())<cr>
 
-if get(g:, "send_disable_mapping", 0)
-    finish
-endif
-
-nmap ss <Plug>SendLine
-nmap s <Plug>Send
-vmap s <Plug>Send
-nmap S s$

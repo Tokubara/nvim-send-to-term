@@ -6,8 +6,8 @@ let g:loaded_sendtoterm = 1
 " Parts specific to terminal destination
 let s:nl = has("win32")? "\r\n": "\n"
 let s:send_multiline = {
-\   'default': {'begin':'', 'end': s:nl, 'newline': 'newline': s:nl.""},
-\   'ipy': {'begin':"\e[200~", 'end':"\e[201~\r\r\r", 'newline': s:nl.""}
+\   'default': {'begin':'', 'end': s:nl, 'newline': s:nl.''},
+\   'ipy': {'begin':"\e[200~", 'end':"\e[201~\r\r\r", 'newline': s:nl.''}
 \}
 " For ipython, this works too:
 " 'ipy': {'begin':'', 'end':"\r\r\r", 'newline':"\<c-q>\n"}
